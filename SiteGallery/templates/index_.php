@@ -6,7 +6,7 @@ $link = mysqli_connect('127.0.0.1', 'root', '', 'geekbrains')
  
 
 $query ="SELECT * FROM gallery_images";
-$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
+$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
 if($result)
 {
     echo "Выполнение запроса прошло успешно";
