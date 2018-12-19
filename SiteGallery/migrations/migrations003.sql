@@ -4,8 +4,6 @@ CREATE TABLE `geekbrains`.`review` (
   )
   ENGINE = InnoDB;
 
-
-
 INSERT INTO review (name, review_text)
 VALUES 
 ('', ''),

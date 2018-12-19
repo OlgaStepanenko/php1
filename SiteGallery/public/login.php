@@ -6,18 +6,13 @@ require_once '../config/connect.php';
 
 require '../templates/login_.php';
 
-
-
 $email = '';
 $password = '';
 $error = '';
 
-
 if (isset($_POST['email'], $_POST['password']))  {
 	$email = $_POST['email'];
 	$password = $_POST['password'];
-
-
 
 	$user = getUserByEmail ($mysqlConnect, $email);
 

@@ -3,7 +3,6 @@ error_reporting(E_ALL);
 
 $link = mysqli_connect("127.0.0.1", "root", "", "geekbrains");
 
-
 $galleryArr = [
 	'foto1' => "flex1.png",
 	'foto2' => "flex2.png",
@@ -15,7 +14,6 @@ $galleryArr = [
 	'foto8' => "flex8.png",
 	'foto9' => "flex9.png"
 ];
-
 
 foreach ($galleryArr as $key => $foto)
  

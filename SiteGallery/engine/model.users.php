@@ -14,7 +14,6 @@ function creatUser ($mysqlConnect, $email, $passwordHash = '', $token = '', $las
 		$lastActionAt
 	};
 
-
 	mysql_query($mysqlConnect, $sql);
 
 	if (mysqli_error($mysqlConnect)) {
@@ -22,8 +21,6 @@ function creatUser ($mysqlConnect, $email, $passwordHash = '', $token = '', $las
 	}
 	return mysql_insert_id($mysqlConnect);
 }
-
-
 
 function getUsers ($mysqlConnect) {
 	$sql = 'SELECT * FROM users_login';
@@ -37,8 +34,6 @@ function getUsers ($mysqlConnect) {
 	return $users;
 }
 
-
-
 function getUser ($mysqlConnect, $id) {
 	$id = (int)$id;
 	$sql = 'SELECT * FROM users_login WHERE id=' .$id;
@@ -51,7 +46,6 @@ function getUser ($mysqlConnect, $id) {
 	}
 	return $user;
 }
-
 
 function getUserByEmail ($mysqlConnect, $email) {
 	$sql = sprintf(
