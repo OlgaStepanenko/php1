@@ -1,14 +1,13 @@
 <?php
 
-$distConfig = require __DIR__.'/../config/config.dist.php';
+//require_once '../engine/funcs.php';
 
-//$config = array_merge($distConfig); 
+require_once '../engine/repositories.php';
 
-$mysqlConnect = mysqli_connect(
-    $config['db_host'],
-    $config['db_user'],
-    $config['db_pass'],
-    $config['db_name']
-    );
+$config = require '../config/config.php';
+
+$mysqliConnect = mysql_connect($config['db_host'], $config['db_user'], $config['db_pass'], $config['db_name']);
+
+
 
 ?>
