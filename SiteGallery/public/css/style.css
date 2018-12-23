@@ -1,5 +1,10 @@
 *{margin: 0; padding: 0;}
 
+.gallery {
+	height: 200px;
+	width: 200px;
+}
+
 .container {
 	display: block;
 	width: 1600px;

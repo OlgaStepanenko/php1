@@ -69,7 +69,7 @@ require_once '../engine/init.php';
 				
 				<div class="foto_latest_works">
 					<?php
-						$galleryes = getGallery($mysqliConnect);
+						$galleryes = getGallery2($mysqliConnect);
 						include '../templates/galleryes.php';
 					?>
 
