@@ -5,7 +5,7 @@
 	?>
 		<strong><?= $gallery['id'] ?></strong>
 		<?= $gallery['name'] ?>
-		<img style="height: 200px" src="<?= $gallery['track'] ?>" alt="<?= $gallery['name'] ?>">
+		<img style="height: 230px" src="<?= $gallery['track'] ?>" alt="<?= $gallery['name'] ?>">
 
 	<?php 
 	endforeach;
