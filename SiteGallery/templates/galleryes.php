@@ -4,9 +4,9 @@
 			
 	?>
 		<li>
-			<strong><?php $gallery['id_gallery'] ?></strong>
-			<?php $gallery['name'] ?>
-			<?php $gallery['src=\"track\"'] ?>
+			<strong><?= $gallery['id'] ?></strong>
+			<?= $gallery['name'] ?>
+			<img src="<?= $gallery['src'] ?>" alt="<?= $gallery['name'] ?>">
 		</li>
 
 	<?php 
