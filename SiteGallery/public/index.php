@@ -60,7 +60,7 @@ require_once '../engine/init.php';
 		<main>	
 
 			<div id="block_latest_works">
-				<h2 class="serv">latest works</h2>
+				<h2 class="serv">галерея</h2>
 				<img id="line" src="./img/line3.png">
 
 				<?php
