@@ -22,12 +22,12 @@ function getGallery2($mysqliConnect, $orderDIR = 'ABC') {
 	return $galleryes;
 }
 
-function getReviewes ($mysqliConnect) {
-	$sql = 'SELECT * FROM reviewes';
+function getReviewes ($mysqliConnect, $orderDIR = 'ABC' ) {
+	$sql = sprintf("SELECT * FROM reviewes WHERE id >0", $orderDIR);
 	$stmt = mysqli_query($mysqliConnect, $sql);
 	$reviewes = [];
 	while ($row = mysqli_fetch_assoc($stmt)) {
-		$reviewes[] = $row;
+		$reviewes [] = $row;
 	}
 	return $reviewes;
 }

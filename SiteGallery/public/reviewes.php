@@ -1,6 +1,10 @@
+
 <?php
 
 require_once '../engine/init.php';
+
+require '../engine/menu_builder.php';
+
 
 //require '../templates/review.php'
 
@@ -57,30 +61,24 @@ require_once '../engine/init.php';
 						<form method="post" action="reviewes.php">
 							<div class="form-group">
     							<label for="exampleFormControlInput1">Ваше имя</label>
-    							<input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Имя">
+    							<input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Имя" required>
   							</div>
  							<div class="form-group">
     							<label for="exampleFormControlTextarea1">Оставьте свой отзыв</label>
-    							<textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="3"></textarea>
+    							<textarea class="form-control" name="review" id="exampleFormControlTextarea1" rows="3" required></textarea>
   							</div>
   							<div>
-  								<button type="submit" class="btn btn-primary">Отправить!</button>
+  								<button type="submit"  class="btn btn-primary">Отправить!</button>
   							</div>
 						</form>
 					<div>	
 						<ul>
 							<?php
-							$reviewes = getReviewes(mysqliConnect);
-							print_r($reviewes);
-							die;
+							$reviewes = getReviewes($mysqliConnect);
+							include '../templates/reviewes.php';
 							?>
-							<?php 
-							foreach ($reviewes as $reviewes): ?>
-							<li>
-								<strong><?= $reviewes['name'] ?></strong> 
-								<strong><?= $reviewes['review'] ?></strong>
-							</li>
-						<?php endforeach ?>
+							
+							
 						</ul>
 					</div>
 					
@@ -121,3 +119,8 @@ require_once '../engine/init.php';
 	</div>
 </body>
 </html>
+
+
+
+
+
