@@ -1,4 +1,3 @@
-CREATE DATABASE geekbrains 
 
 CREATE TABLE reviewes (
 	id int (15) NOT NULL AUTO_INCREMENT,
@@ -9,3 +8,6 @@ CREATE TABLE reviewes (
 
 INSERT INTO reviewes (name, review) VALUES ('Ольга', 'Отзыв');
 
+SELECT * FROM reviewes WHERE id >0
+
+SHOW TABLES;

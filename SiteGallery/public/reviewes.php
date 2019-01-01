@@ -3,9 +3,6 @@
 
 require_once '../engine/init.php';
 
-require '../engine/menu_builder.php';
-
-
 //require '../templates/review.php'
 
 ?>
@@ -67,8 +64,10 @@ require '../engine/menu_builder.php';
     							<label for="exampleFormControlTextarea1">Оставьте свой отзыв</label>
     							<textarea class="form-control" name="review" id="exampleFormControlTextarea1" rows="3" required></textarea>
   							</div>
+
   							<div>
   								<button type="submit"  class="btn btn-primary">Отправить!</button>
+  									
   							</div>
 						</form>
 					<div>	
@@ -77,7 +76,9 @@ require '../engine/menu_builder.php';
 							$reviewes = getReviewes($mysqliConnect);
 							include '../templates/reviewes.php';
 							?>
-							
+							<?php
+							include'../templates/review.php';
+							?>
 							
 						</ul>
 					</div>

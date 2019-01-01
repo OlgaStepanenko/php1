@@ -3,27 +3,8 @@
 
 require_once '../engine/init.php';
 
-//require '../templates/gallery2_.php';
-
 ?>
 
-//<?php
-
-//$link = mysqli_connect('127.0.0.1', 'root', '', 'geekbrains')
-//	or die("Ошибка" . mysqli_error($link));
- 
-
-//$query ="SELECT * FROM gallery_spb";
-//$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
-//if($result)
-//{
-//    echo "Выполнение запроса прошло успешно";
-//}
- 
-
-//mysqli_close($link);
-
-//?>
 
 
 <!DOCTYPE html>
@@ -136,7 +117,7 @@ require_once '../engine/init.php';
 						<i class="fab fa-instagram"></i>
 					</div>
 			</div>
-			<img id="line_by" src="./img/line5.png">  <!--почему-то в слоях в фотошопе отсутствует нужная картинка, отсутствует ВООБЩЕ -->
+			<img id="line_by" src="./img/line5.png"> 
 				<p class="by">&copy; 2015 startup, designed by shapedtheme</p>
 		</footer>
 	</div>

@@ -2,7 +2,7 @@
 	foreach ($reviewes as $reviewes): 
 			
 	?>
-		<strong><?= $reviewes['id'] ?></strong>
+		<br><strong><?= $reviewes['id'] ?></strong>
 		<?= $reviewes['name'] ?>
 		<?= $reviewes['review'] ?>
 

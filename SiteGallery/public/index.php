@@ -2,28 +2,7 @@
 
 require_once '../engine/init.php';
 
-//require '../templates/index_.php';
-
 //?>
-
-<?php
-
-
-//$link = mysqli_connect('127.0.0.1', 'root', '', 'geekbrains')
-//	or die("Ошибка" . mysqli_error($link));
- 
-
-//$query ="SELECT * FROM gallery_images";
-//$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
-//if($result)
-//{
-//    echo "Выполнение запроса прошло успешно";
-//}
- 
-
-//mysqli_close($link);
-
-?>
 
 
 
