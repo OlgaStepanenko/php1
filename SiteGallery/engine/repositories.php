@@ -31,3 +31,17 @@ function getReviewes ($mysqliConnect) {
 	}
 	return $reviewes;
 }
+
+function getCatalog ($mysqliConnect) {
+	$sql = sprintf("SELECT * FROM catalog WHERE id >0");
+	$stmt = mysqli_query($mysqliConnect, $sql);
+	$catalog = [];
+	while ($row = mysqli_fetch_assoc($stmt)) {
+		$catalog [] = $row;
+	}
+	return $catalog;
+
+}
+
+
+
