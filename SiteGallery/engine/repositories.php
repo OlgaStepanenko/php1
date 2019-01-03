@@ -32,6 +32,18 @@ function getReviewes ($mysqliConnect) {
 	return $reviewes;
 }
 
+
+function getCatalog ($mysqliConnect) {
+	$sql = sprintf("SELECT * FROM catalog WHERE id >0");
+	$stmt = mysqli_query($mysqliConnect, $sql);
+	$catalog = [];
+	while ($row = mysqli_fetch_assoc($stmt)) {
+		$catalog [] = $row;
+	}
+	return $product;
+
+}
+
 function getProduct ($mysqliConnect) {
 	$sql = sprintf("SELECT * FROM product WHERE id >0");
 	$stmt = mysqli_query($mysqliConnect, $sql);
@@ -43,8 +55,29 @@ function getProduct ($mysqliConnect) {
 
 }
 
+function getProductOne ($mysqliConnect) {
+	$id = (int) $id;
+	$sql = sprintf("SELECT * FROM product WHERE id=".id);
+	$stmt = mysqli_query($mysqliConnect, $sql);
+	$product = null;
+	while ($row = mysqli_fetch_assoc($stmt)) {
+		$product = $row;
+		break;
+	}
+	return $product;
+
+}
+
+
 
 function deleteProduct ($mysqliConnect, $id) {
+	$date = date('Y-m-d H:i:s');
+	$sql = sprintf('UPDATE product SET deleted_at="%s" WHERE id="%s"',	$date, (int)$id);
+	mysqli_query($mysqliConnect, $sql);
+	if (mysqli_error($mysqliConnect)) {
+		return false;
+	}
+
 	return true;
 }
 

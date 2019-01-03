@@ -1,10 +1,12 @@
 <?php 
-	foreach ($catalog as $product): 
+	foreach ($product as $product): 
 			
 	?>
+		<a href="/catalog_admin_edit.php?id=<? $product['id'] ?>">
 		<br><strong><?= $product['id'] ?></strong>
 		<?= $product['name'] ?>
 		<?= $product['price'] ?>
+		</a>
 		<!--<img style="height: 250px" src="<?= $catalog['image'] ?>" alt="<?= $catalog['name'] ?>">	-->
 
 	<?php 

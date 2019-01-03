@@ -8,7 +8,7 @@
 		<li><a href="login.php"> Регистрация</a></li>
 		<li><a href="catalog.php"> Каталог</a></li>
 		<li><a href="catalog_admin.php"> Админка</a></li>
-		<li><a href=""> Еще</a></li>
+		<li><a href="catalog_admin_edit.php"> Редактирование товара</a></li>
 		<li><a href=""> Еще</a></li>
 	</ul>
 </nav>

@@ -40,7 +40,7 @@ require_once '../engine/init.php';
 		<main>	
 
 			<div id="block_latest_works">
-				<h2 class="serv">Админка</h2>
+				<h2 class="serv">Редактирование товара</h2>
 				<img id="line" src="./img/line3.png">
 
 				<?php
@@ -54,21 +54,21 @@ require_once '../engine/init.php';
 				<form method="post" enctype="multipart/form-data">
   					<div class="form-group">
     					<label for="exampleFormControlInput1">Имя</label>
-   						<input type="name" name="name" class="form-control" placeholder="Имя">
+   						<input type="name" name="name" value="<?= $product['name'] ?>" class="form-control" placeholder="Имя">
   					</div>
   					<div class="form-group">
     					<label for="exampleFormControlTextarea1">Описание товара</label>
-    					<textarea class="form-control" name="description" rows="6" placeholder="Описание товара" required></textarea>
+    					<textarea class="form-control" <?= $product['description'] ?> name="description" rows="6" placeholder="Описание товара" required></textarea>
   					</div>
   					<div class="form-group">
     					<label for="exampleFormControlInput1">Цена</label>
-   						<input type="" name="price" class="form-control" placeholder="Цена">
+   						<input type="" name="price" value="<?= $product['price'] ?>" class="form-control" placeholder="Цена">
   					</div>
   					<div class="form-group">
     					<label for="exampleFormControlSelect1">Категория</label>
     					<select name="category" class="form-control">
-      						<option value="for_man">Для мужчин</option>
-      						<option value="for_kids">Для детей</option>
+      						<option value="for_man" <?= if($product['category'] == 'for_man') {echo 'selected';} ?> >Для мужчин</option>
+      						<option value="for_kids" <?= if($product['category'] == 'for_kids') {echo 'selected';} ?> >Для детей</option>
       						</select>
         			</div>
         			<div class="form-group">
@@ -82,10 +82,8 @@ require_once '../engine/init.php';
   				<div>
   					<?php
 						$product = getProduct($mysqliConnect);
-						include '../templates/catalog_admin.php';
-						include '../templates/catalog_admin_vivod.php';
+						
 					?>
-
   				</div>			
 				</div>
 			</div>
