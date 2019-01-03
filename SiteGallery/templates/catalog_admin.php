@@ -21,7 +21,7 @@ if ($_POST) {
 	$category = $_POST['category'];
 	//print_r($name);
 	$sql = sprintf(
-		"INSERT INTO catalog (name, description, category, price, image) VALUES ('%s', '%s', '%s', '%s', '%s')",
+		"INSERT INTO product (name, description, category, price, image) VALUES ('%s', '%s', '%s', '%s', '%s')",
 		mysqli_real_escape_string($mysqliConnect, (string) htmlspecialchars(strip_tags($name))),
 		mysqli_real_escape_string($mysqliConnect, (string) htmlspecialchars(strip_tags($description))),
 		mysqli_real_escape_string($mysqliConnect, (string) htmlspecialchars(strip_tags($category))),

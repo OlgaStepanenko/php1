@@ -51,7 +51,7 @@ require_once '../engine/init.php';
 					
 					<?php
 						$catalog = getCatalog($mysqliConnect);
-						include'../templates/catalog_.php';
+						//include'../templates/catalog_vivod.php';
 					?>
 
 

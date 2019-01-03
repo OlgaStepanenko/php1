@@ -81,8 +81,9 @@ require_once '../engine/init.php';
   				</form>	
   				<div>
   					<?php
-						$catalog = getCatalog($mysqliConnect);
+						$catalog = getProduct($mysqliConnect);
 						include '../templates/catalog_admin.php';
+						include '../templates/catalog_admin_vivod.php';
 					?>
   				</div>			
 				</div>

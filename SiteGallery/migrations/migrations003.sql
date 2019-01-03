@@ -1,4 +1,4 @@
-CREATE TABLE catalog (
+CREATE TABLE product (
 	id int (11) NOT NULL AUTO_INCREMENT,
 	name varchar (255) NULL DEFAULT'',
 	description text NULL,

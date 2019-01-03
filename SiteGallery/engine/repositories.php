@@ -32,16 +32,20 @@ function getReviewes ($mysqliConnect) {
 	return $reviewes;
 }
 
-function getCatalog ($mysqliConnect) {
-	$sql = sprintf("SELECT * FROM catalog WHERE id >0");
+function getProduct ($mysqliConnect) {
+	$sql = sprintf("SELECT * FROM product WHERE id >0");
 	$stmt = mysqli_query($mysqliConnect, $sql);
-	$catalog = [];
+	$product = [];
 	while ($row = mysqli_fetch_assoc($stmt)) {
-		$catalog [] = $row;
+		$product [] = $row;
 	}
-	return $catalog;
+	return $product;
 
 }
 
+
+function deleteProduct ($mysqliConnect, $id) {
+	return true;
+}
 
 
