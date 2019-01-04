@@ -7,7 +7,7 @@ $pageH1 = 'Админка';
 if ($_POST) {
 	//print_r('1');
 	$image = '';
-	if (isset($_FILES['image']) ){//&& $_FILES['image']['tmp_name'])  {
+	if (isset($_FILES['image']) AND $_FILES['image']['tmp_name'])  {
 		$image = '../public/img/catalog/uploaded/'.$_FILES['image']['name'];
 		$uploadedfile =$image;//_DIR_.$image;
 		if (!move_uploaded_file($_FILES['image']['tmp_name'], $uploadedfile)) {

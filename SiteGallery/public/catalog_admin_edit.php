@@ -52,13 +52,17 @@ require_once '../engine/init.php';
 				<div class="foto_latest_works">
 					
 				<form method="post" enctype="multipart/form-data">
+					<?php
+						//$product = getProduct($mysqliConnect);
+						include '../templates/catalog_admin_edit.php';
+					?>
   					<div class="form-group">
     					<label for="exampleFormControlInput1">Имя</label>
    						<input type="name" name="name" value="<?= $product['name'] ?>" class="form-control" placeholder="Имя">
   					</div>
   					<div class="form-group">
     					<label for="exampleFormControlTextarea1">Описание товара</label>
-    					<textarea class="form-control" <?= $product['description'] ?> name="description" rows="6" placeholder="Описание товара" required></textarea>
+    					<textarea class="form-control"  name="description" rows="6" placeholder="Описание товара" required><?= $product['description'] ?></textarea>
   					</div>
   					<div class="form-group">
     					<label for="exampleFormControlInput1">Цена</label>
@@ -81,8 +85,8 @@ require_once '../engine/init.php';
   				</form>	
   				<div>
   					<?php
-						$product = getProduct($mysqliConnect);
-						
+						//$product = getProduct($mysqliConnect);
+						include '../templates/catalog_admin_edit.php';
 					?>
   				</div>			
 				</div>

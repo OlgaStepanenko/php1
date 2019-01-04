@@ -1,7 +1,8 @@
 <?php
 
 require_once '../engine/init.php';
-$id = $_GET['id'] ?? null;
+
+$id = $_GET['id'];// ?? null;
 
 if (!$id) {
 	die('Неверный запрос');
@@ -9,16 +10,18 @@ if (!$id) {
 $product = getProductOne($mysqliConnect, $id);
 //var_dump($product);
 //die;
+
 if (!$product) {
 	die('Нет продкута с таким id');
 }
+
 
 $pageH1 = 'Редактирование';
 
 if ($_POST) {
 	//print_r('1');
 	$image = '';
-	if (isset($_FILES['image']) ){//&& $_FILES['image']['tmp_name'])  {
+	if (isset($_FILES['image']) AND $_FILES['image']['tmp_name'])  {
 		$image = '../public/img/catalog/uploaded/'.$_FILES['image']['name'];
 		$uploadedfile =$image;//_DIR_.$image;
 		if (!move_uploaded_file($_FILES['image']['tmp_name'], $uploadedfile)) {
@@ -37,7 +40,8 @@ if ($_POST) {
 		mysqli_real_escape_string($mysqliConnect, (string) htmlspecialchars(strip_tags($description))),
 		mysqli_real_escape_string($mysqliConnect, (string) htmlspecialchars(strip_tags($category))),
 		$price,
-		$image
+		$image,
+		$id
 	);
 	//print_r($sql);
 		mysqli_query($mysqliConnect, $sql);
@@ -54,6 +58,6 @@ if ($_POST) {
 	$messege = 'Продукт с id='.$id.' отредактирован';
 }
 
-header('Location: catalog_admin.php?messege='.$messege);
+//header('Location: catalog_admin.php?messege='.$messege);
 
 ?>

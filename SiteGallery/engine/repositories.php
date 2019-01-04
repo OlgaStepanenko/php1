@@ -55,9 +55,9 @@ function getProduct ($mysqliConnect) {
 
 }
 
-function getProductOne ($mysqliConnect) {
+function getProductOne ($mysqliConnect, $id) {
 	$id = (int) $id;
-	$sql = sprintf("SELECT * FROM product WHERE id=".id);
+	$sql = sprintf("SELECT * FROM product WHERE id=".$id);
 	$stmt = mysqli_query($mysqliConnect, $sql);
 	$product = null;
 	while ($row = mysqli_fetch_assoc($stmt)) {
