@@ -72,7 +72,7 @@ function getProductOne ($mysqliConnect) {
 
 function deleteProduct ($mysqliConnect, $id) {
 	$date = date('Y-m-d H:i:s');
-	$sql = sprintf('UPDATE product SET deleted_at="%s" WHERE id="%s"',	$date, (int)$id);
+	$sql = sprintf('UPDATE product SET deleted_at="%s" WHERE id="%d"',	$date, (int)$id);
 	mysqli_query($mysqliConnect, $sql);
 	if (mysqli_error($mysqliConnect)) {
 		return false;

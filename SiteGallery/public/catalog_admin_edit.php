@@ -67,8 +67,8 @@ require_once '../engine/init.php';
   					<div class="form-group">
     					<label for="exampleFormControlSelect1">Категория</label>
     					<select name="category" class="form-control">
-      						<option value="for_man" <?= if($product['category'] == 'for_man') {echo 'selected';} ?> >Для мужчин</option>
-      						<option value="for_kids" <?= if($product['category'] == 'for_kids') {echo 'selected';} ?> >Для детей</option>
+      						<option value="for_man" <?php if($product['category'] == 'for_man') {echo 'selected';} ?> >Для мужчин</option>
+      						<option value="for_kids" <?php if($product['category'] == 'for_kids') {echo 'selected';} ?> >Для детей</option>
       						</select>
         			</div>
         			<div class="form-group">
