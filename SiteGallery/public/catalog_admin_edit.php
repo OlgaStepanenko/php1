@@ -58,7 +58,7 @@ require_once '../engine/init.php';
 					?>
   					<div class="form-group">
     					<label for="exampleFormControlInput1">Имя</label>
-   						<input type="name" name="name" value="<?= $product['name'] ?>" class="form-control" placeholder="Имя">
+   						<input type="name" name="name" value= "<?= $product['name'] ?>"  class="form-control" placeholder="Имя">
   					</div>
   					<div class="form-group">
     					<label for="exampleFormControlTextarea1">Описание товара</label>

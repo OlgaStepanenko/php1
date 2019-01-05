@@ -83,11 +83,18 @@ require_once '../engine/init.php';
   					<?php
 						$product = getProduct($mysqliConnect);
 						include '../templates/catalog_admin.php';
-						include '../templates/catalog_admin_vivod.php';
+						
 					?>
 
-  				</div>			
+  				</div>	
+				<div>
+  					<?php 
+  						include '../templates/catalog_admin_vivod.php';
+
+  					?>
+  				</div>	  					
 				</div>
+
 			</div>
 
 			<div id="block_john_doe">

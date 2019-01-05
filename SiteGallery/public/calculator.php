@@ -11,7 +11,7 @@ require_once '../engine/init.php';
 
 
 
-if (isset($_POST['Argument1']) && isset($_POST['Argument2'])) {
+if (isset($_POST['Argument1']) AND isset($_POST['Argument2'])) {
 	switch ($_POST['calc']) {
 	 	case 1:
 	 		$resultat = $_POST['Argument1'] + $_POST['Argument2'];
@@ -33,8 +33,10 @@ if (isset($_POST['Argument1']) && isset($_POST['Argument2'])) {
 			}
 	 		break;
 	 	
-	}
+	} 
 
+} else {
+	$resultat = "введите число";
 }
 
 

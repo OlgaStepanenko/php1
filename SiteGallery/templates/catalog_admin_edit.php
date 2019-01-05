@@ -2,7 +2,18 @@
 
 require_once '../engine/init.php';
 
-$id = $_GET['id'];// ?? null;
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+} else {
+     // присваиваем $bar значение 'default' если $foo равен NULL
+    $id = 'null'; 
+}
+
+//$id = $_GET['id']; // ?? null;
+
+//if ($_POST && isset($_POST['product_id'])) {
+  //  $id = (int)$_POST['product_id'];
+    //$message = '';
 
 if (!$id) {
 	die('Неверный запрос');
