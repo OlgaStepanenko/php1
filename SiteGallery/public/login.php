@@ -56,7 +56,7 @@ require_once '../engine/init.php';
             		<p> <?php $error ?> </p>
         			<?php endif; ?>
 					
-					<form >
+					<form method="post">
   						<div class="form-group"
     						<label for="exampleInputEmail1">Введите логин</label>
     						<input type="email" name="email" value="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" <?php if ($error) { echo 'is-invalid';} ?> placeholder="email" required autofocus>
@@ -137,7 +137,7 @@ require_once '../engine/init.php';
 						<i class="fab fa-instagram"></i>
 					</div>
 			</div>
-			<img id="line_by" src="./img/line5.png">  <!--почему-то в слоях в фотошопе отсутствует нужная картинка, отсутствует ВООБЩЕ -->
+			<img id="line_by" src="./img/line5.png">  
 				<p class="by">&copy; 2015 startup, designed by shapedtheme</p>
 		</footer>
 	</div>

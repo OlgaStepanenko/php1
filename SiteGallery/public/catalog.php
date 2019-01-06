@@ -50,8 +50,8 @@ require_once '../engine/init.php';
 				<div class="foto_latest_works">
 					
 					<?php
-						$catalog = getCatalog($mysqliConnect);
-						//include'../templates/catalog_vivod.php';
+						$product = getCatalog($mysqliConnect);
+						include'../templates/catalog_vivod.php';
 					?>
 
 

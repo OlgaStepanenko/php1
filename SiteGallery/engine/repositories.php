@@ -34,11 +34,11 @@ function getReviewes ($mysqliConnect) {
 
 
 function getCatalog ($mysqliConnect) {
-	$sql = sprintf("SELECT * FROM catalog WHERE id >0");
+	$sql = sprintf("SELECT * FROM product WHERE deleted_at is null");
 	$stmt = mysqli_query($mysqliConnect, $sql);
-	$catalog = [];
+	$product = [];
 	while ($row = mysqli_fetch_assoc($stmt)) {
-		$catalog [] = $row;
+		$product [] = $row;
 	}
 	return $product;
 
