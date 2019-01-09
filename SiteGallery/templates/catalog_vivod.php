@@ -8,6 +8,9 @@
 		<br><?= $product['category'] ?>
 		<br><?= $product['description'] ?>
 		<br><?= $product['price'] ?>
+		<form method="post">
+		<br><button type="submit"  class="btn btn-primary">Купить</button>
+		</form>
 
 	<?php 
 	endforeach;
