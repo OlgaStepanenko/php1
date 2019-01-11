@@ -40,6 +40,7 @@ require_once '../engine/init.php';
 			<div id="block_latest_works">
 				<h2 class="serv">Каталог</h2>
 				<img id="line" src="./img/line3.png">
+				<a href="/cart.php">Корзина(<?php if (isset($_SESSION['cart'])) {echo count($_SESSION['cart']);} else {echo '0';} ?>)</a>
 
 				<?php
 						include'../templates/fragment/menu.php';

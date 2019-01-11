@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../engine/init.php';
+require_once '../engine/init.php';
 
 $messege = 'ok';
 if ($_POST && isset($_POST['product_id'])) {
@@ -28,6 +28,13 @@ if ($_POST && isset($_POST['product_id'])) {
 	$_SESSION['success_messege'] = $messege;
 }
 
-print_r($_SERVER);
-die;
+$toUrl = '/cart/index_cart.php';
+
+if (isset($_SERVER['HTTP_REFERER'])) {
+	$toUrl = $$_SERVER['HTTP_REFERER'];
+}
+
+
 //header('Location: catalog_admin.php?messege='.$messege);
+
+?>

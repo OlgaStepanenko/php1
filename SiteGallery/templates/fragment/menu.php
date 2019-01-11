@@ -9,6 +9,6 @@
 		<li><a href="catalog.php"> Каталог</a></li>
 		<li><a href="catalog_admin.php"> Админка</a></li>
 		<li><a href="catalog_admin_edit.php"> Редактирование товара</a></li>
-		<li><a href="cart/index_cart.php"> Корзина</a></li>
+		<li><a href="cart.php"> Корзина</a></li>
 	</ul>
 </nav>

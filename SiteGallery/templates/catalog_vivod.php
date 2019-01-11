@@ -8,8 +8,9 @@
 		<br><?= $product['category'] ?>
 		<br><?= $product['description'] ?>
 		<br><?= $product['price'] ?>
-		<form method="post">
-		<br><button type="submit"  class="btn btn-primary">Купить</button>
+		<form method="post" action="/cart.php">
+			<input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+			<br><button type="submit"  class="btn btn-sm btn-outline-secondary">Купить</button>
 		</form>
 
 	<?php 
