@@ -46,46 +46,40 @@ require '../engine/init.php';
 
 				<?php
 						include'../templates/fragment/menu.php';
+
 					?>
 				
 				<div class="foto_latest_works">
-					<?php foreach ($cartTableData as $cartItem): ?>
 
-					<table class="table">
- 					<thead>
-   						<tr>
-      						<th scope="col">#</th>
-      						<th scope="col">Название товара</th>
-      						<th scope="col">Количество</th>
-      						<th scope="col">Цена</th>
-      						<th scope="col">Сумма</th>
+					<?php 
+						include '../templates/index_card.php';
+					 ?>
+
+					<?php foreach ($cartTableData as $cartItem): ?>
+						<tr>
+							<td data-th="Product">
+								<div>
+									<div>
+										<h4> <?= $cartItem['mame']?></h4>
+										<p><?= $cartItem['short_description']?> </p>
+									</div>
+								</div>
+    						</td>
+    						<td data-th="Price"><?= $cartItem['price'] ?>рублей</td>
+    						<td data-th="Quantity">
+    							<input type="number" class="form-control text-center" value="<?= $cartItem['quantity'] ?>">
+    						</td>
+    						<td data-th="Subtotal"><?= $cartItem['subtotal'] ?>рублей</td>
+    						<td data-th="">
+    							<button class="btn btn-danger btn-sm"><i class="fa fa-frash-o"></i></button>
+    						</td>
     					</tr>
-  					</thead>
-  					<tbody>
-    					<tr>
-      						<th scope="row">1</th>
-      						<td>Mark</td>
-      						<td>Otto</td>
-      						<td>@mdo</td>
-    					</tr>
-    					<tr>
-     						<th scope="row">2</th>
-      						<td>Jacob</td>
-      						<td>Thornton</td>
-      						<td>@fat</td>
-    					</tr>
-    					<tr>
-      						<th scope="row">3</th>
-      						<td>Larry</td>
-      						<td>the Bird</td>
-      						<td>@twitter</td>
-    					</tr>
-  					</tbody>
-					</table>
 
 				<?php  endforeach ?>
 
-
+				<tr class="visible-xs">
+					<td class="text-center"><strong>Total <?= $cartTotalSum ?>рублей</strong></td>
+				</tr>
 
 
 					
