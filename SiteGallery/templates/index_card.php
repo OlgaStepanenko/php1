@@ -6,7 +6,7 @@ require '../engine/init.php';
 $pageH1 = 'Корзина';
 var_dump($_SESSION);
 
-$cart = $_SESSION['cart'] AND [];
+$cart = $_SESSION['cart'] ?? [];
 $cartTableData = [];
 $cartTotalSum = 0;
 foreach ($cart as $productId => $cartItem) {

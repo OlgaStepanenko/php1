@@ -71,6 +71,8 @@ require '../engine/init.php';
     						</td>
     						<td data-th="Subtotal"><?= $cartItem['subtotal'] ?>рублей</td>
     						<td data-th="">
+    							<form method="post" action="/templates/delete_cart.php">
+    								<input type="hidd" name="">
     							<button class="btn btn-danger btn-sm"><i class="fa fa-frash-o"></i></button>
     						</td>
     					</tr>
