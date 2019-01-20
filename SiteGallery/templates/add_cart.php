@@ -31,7 +31,7 @@ if ($_POST && isset($_POST['product_id'])) {
 $toUrl = '/cart/index_cart.php';
 
 if (isset($_SERVER['HTTP_REFERER'])) {
-	$toUrl = $$_SERVER['HTTP_REFERER'];
+	$toUrl = $_SERVER['HTTP_REFERER'];
 }
 
 

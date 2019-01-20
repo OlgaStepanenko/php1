@@ -6,7 +6,15 @@ require '../engine/init.php';
 $pageH1 = 'Корзина';
 var_dump($_SESSION);
 
-$cart = $_SESSION['cart'] ?? [];
+//$cart = $_SESSION['cart'] ?? [];
+
+if (isset($_SESSION['cart'])) {
+    $cart = $_SESSION['cart'];
+} else {
+     $cart = []; 
+}
+
+
 $cartTableData = [];
 $cartTotalSum = 0;
 foreach ($cart as $productId => $cartItem) {
@@ -19,6 +27,6 @@ foreach ($cart as $productId => $cartItem) {
 }
 
 
-require ROOT_DIR.'../templates/cart.php';
+//require '../public/cart.php';
 ?>
 
